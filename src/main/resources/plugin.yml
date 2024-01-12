@@ -1,0 +1,47 @@
+name: SnowBallFight
+version: '1.20.2'
+main: com.hinaplugin.snowballfight.SnowBallFight
+api-version: 1.20
+prefix: SnowBallFight
+authors: [ hina2113 ]
+description: 雪合戦プラグイン
+
+commands:
+  snowballfight:
+    permission: snowballfight.commands
+    permission-message: You do not have permission perform this commands!
+    aliases:
+      - sbf
+    usage: /sbf <subcommands> [args...]
+
+permissions:
+  snowballfight.commands.admin:
+    children:
+      - snowballfight.commands
+      - snowballfight.commands.start
+      - snowballfight.commands.stop
+      - snowballfight.commands.set
+      - snowballfight.commands.join
+      - snowballfight.commands.leave
+      - snowballfight.commands.joinall
+      - snowballfight.commands.joinother
+    default: op
+    description: 運営用（全権限オプション）
+
+  snowballfight.commands.player:
+    children:
+      - snowballfight.commands
+      - snowballfight.commands.join
+      - snowballfight.commands.leave
+      - snowballfight.commands.start
+    default: true
+    description: プレイヤー用
+
+  snowballfight.commands: {}
+  snowballfight.commands.start: {}
+  snowballfight.commands.stop: {}
+  snowballfight.commands.set: {}
+  snowballfight.commands.join: {}
+  snowballfight.commands.leave: {}
+  snowballfight.commands.joinall: {}
+  snowballfight.commands.joinother: {}

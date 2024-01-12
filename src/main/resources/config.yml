@@ -1,0 +1,36 @@
+#残機
+life: 3
+
+#試合時間(秒)
+time: 300
+
+#ボール設定(初期配布・追加配布・追加配布までの時間)
+start-ball: 8
+add-ball: 16
+add-time: 10
+
+#スタート地点(リスポーンにも使用)
+red-location:
+  world: world
+  x: 0
+  y: 0
+  z: 0
+  facing: 0
+blue-location:
+  world: world
+  x: 0
+  y: 0
+  z: 0
+  facing: 0
+
+#ゲーム終了時のTP地点
+end-location:
+  world: world
+  x: 0
+  y: 0
+  z: 0
+  facing: 0
+
+#参加者ではないプレイヤーが開始コマンドを打てるようにする
+#(コンソールやコマンドブロックから実行する場合もtrueにする必要があります．)
+out-player: false
